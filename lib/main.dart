@@ -1,9 +1,13 @@
 import 'package:borrowed_stuff/pages/home_page.dart';
+import 'package:borrowed_stuff/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  setupLocator();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -34,8 +38,8 @@ class MyApp extends StatelessWidget {
     return ThemeData(
       brightness: Brightness.dark,
       primaryColor: Color(0xFF212121),
-      accentColor: Colors.deepOrange,
-      primarySwatch: Colors.deepOrange,
+      accentColor: Colors.indigo,
+      primarySwatch: Colors.lightBlue,
     );
   }
 }
